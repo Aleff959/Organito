@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=Organito
+Comment=Organizador automático de diretórios
+Exec=organito
+Icon=io.github.aleff959.Organito
+Type=Application
+Terminal=false
+Categories=Utility;FileManager;
+Keywords=organizar;arquivos;pastas;organizer;

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component type="desktop-application">
+  <id>io.github.aleff959.Organito</id>
+  <metadata_license>CC0-1.0</metadata_license>
+  <project_license>MIT</project_license>
+  <name>Organito</name>
+  <summary>Mantenha seus diretórios limpos e arrumados</summary>
+  <description>
+    <p>
+      Organito organiza automaticamente os arquivos de uma pasta em subpastas
+      por categoria: Imagens, Documentos, Vídeos, Áudio, Planilhas, e mais.
+    </p>
+    <p>
+      Basta selecionar o diretório, escolher quais categorias ativar e clicar
+      em Organizar. Simples assim.
+    </p>
+  </description>
+  <launchable type="desktop-id">io.github.aleff959.Organito.desktop</launchable>
+  <url type="homepage">https://github.com/aleff959/Organito</url>
+  <provides>
+    <binary>organito</binary>
+  </provides>
+  <releases>
+    <release version="1.0.0" date="2026-05-27">
+      <description><p>Versão inicial.</p></description>
+    </release>
+  </releases>
+  <content_rating type="oars-1.1" />
+</component>

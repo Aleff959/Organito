@@ -1,0 +1,47 @@
+{
+    "id": "io.github.aleff959.Organito",
+    "runtime": "org.gnome.Platform",
+    "runtime-version": "45",
+    "sdk": "org.gnome.Sdk",
+    "command": "organito",
+    "finish-args": [
+        "--share=ipc",
+        "--socket=wayland",
+        "--socket=fallback-x11",
+        "--device=dri",
+        "--filesystem=xdg-download",
+        "--filesystem=xdg-desktop",
+        "--filesystem=home",
+        "--talk-name=org.freedesktop.Notifications"
+    ],
+    "modules": [
+        {
+            "name": "psutil",
+            "buildsystem": "simple",
+            "build-commands": [
+                "pip3 install --prefix=/app psutil"
+            ],
+            "sources": [
+                {"type": "shell", "commands": ["pip3 download psutil -d /tmp/psutil_pkg"]}
+            ]
+        },
+        {
+            "name": "organito",
+            "buildsystem": "simple",
+            "build-commands": [
+                "install -Dm755 src/main.py /app/bin/organito",
+                "install -Dm644 src/core.py /app/bin/core.py",
+                "install -Dm644 src/ui.py /app/bin/ui.py",
+                "install -Dm644 src/settings.py /app/bin/settings.py",
+                "install -Dm644 src/sysinfo.py /app/bin/sysinfo.py",
+                "install -Dm644 data/io.github.aleff959.Organito.desktop /app/share/applications/io.github.aleff959.Organito.desktop",
+                "install -Dm644 data/io.github.aleff959.Organito.metainfo.xml /app/share/metainfo/io.github.aleff959.Organito.metainfo.xml",
+                "install -Dm644 data/icon_256.png /app/share/icons/hicolor/256x256/apps/io.github.aleff959.Organito.png",
+                "install -Dm644 data/icons/hicolor/128x128/apps/io.github.aleff959.Organito.png /app/share/icons/hicolor/128x128/apps/io.github.aleff959.Organito.png",
+                "install -Dm644 data/icons/hicolor/64x64/apps/io.github.aleff959.Organito.png /app/share/icons/hicolor/64x64/apps/io.github.aleff959.Organito.png",
+                "install -Dm644 data/icons/hicolor/48x48/apps/io.github.aleff959.Organito.png /app/share/icons/hicolor/48x48/apps/io.github.aleff959.Organito.png"
+            ],
+            "sources": [{"type": "dir", "path": "."}]
+        }
+    ]
+}
