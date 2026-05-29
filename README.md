@@ -42,8 +42,6 @@
 
 ```text
 organito/
-├── organito_1.0_all.deb               # Pacote de instalação Debian/Ubuntu
-├── README.md                          # Documentação do projeto
 ├── src/                               # Código-fonte principal
 │   ├── main.py                        # Entrypoint do aplicativo
 │   ├── core.py                        # Lógica interna e mapeamento de categorias
